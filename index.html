@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah & Michael - Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Envelope Opening Animation -->
+    <div id="envelope-container" class="envelope-container">
+        <div class="envelope" id="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-flap" id="envelope-flap"></div>
+            <div class="envelope-seal">
+            </div>
+            <div class="invitation-card" id="invitation-card">
+                <div class="card-content">
+                    <h3>Together With Their Families</h3>
+                    <h2>Tsion & Bereket</h2>
+                    <p>Invite You To Celebrate Their Wedding</p>
+                    <button class="open-btn" id="open-btn">Open Invitation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Website -->
+    <div id="main-website" class="main-website hidden">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="floating-hearts">
+                <div class="heart" style="color: #ffffff;">❤️</div>
+                <div class="heart" style="color: #d4af37;">💕</div>
+                <div class="heart" style="color: #ffffff;">💖</div>
+                <div class="heart" style="color: #d4af37;">💗</div>
+                <div class="heart" style="color: #ffffff;">💝</div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Tsion <span style="color: #d4af37;">&</span> Bereket</h1>
+                <p class="hero-subtitle">"Request the pleasure of your company"</p>
+            </div>
+        </section>
+
+        <!-- Wedding Quote Section -->
+        <section class="quote-section">
+            <div class="quote-container">
+                <div class="quote-mark opening">"</div>
+                <p class="quote-text">You are my today and all of my tomorrows.</p>
+                <div class="quote-mark closing">"</div>
+            </div>
+        </section>
+
+        <!-- Countdown Timer -->
+        <section class="countdown-section">
+            <h2 class="section-title">Counting Down To Our Special Day</h2>
+            <div class="countdown-container">
+                <div class="countdown-card">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-card">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-card">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-card">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bride and Groom Section -->
+        <section class="couple-section">
+            <h2 class="section-title">The Happy Couple</h2>
+            <div class="couple-container">
+                <div class="person-card" data-tilt>
+                    <div class="person-image">
+                        <img src="download (12).jfif" alt="Bride">
+                    </div>
+                </div>
+                <div class="person-card" data-tilt>
+                    <div class="person-image">
+                        <img src="download (11).jfif" alt="Groom">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wedding Details Section -->
+        <section class="details-section">
+            <h2 class="section-title">Wedding Details</h2>
+            <div class="details-container">
+                <div class="detail-item">
+                    <div class="detail-icon">📅</div>
+                    <div class="detail-info">
+                        <h3>Date</h3>
+                        <p>19 April 2026</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">⏰</div>
+                    <div class="detail-info">
+                        <h3>Time</h3>
+                        <p>7:00 PM</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🏛️</div>
+                    <div class="detail-info">
+                        <h3>Venue</h3>
+                        <p>Eden Genet Hall</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">📍</div>
+                    <div class="detail-info">
+                        <h3>Tsion</h3>
+                        <p><a href="https://maps.app.goo.gl/AGsNn1Ra6dYcceYcA?g_st=atm" target="_blank" style="color: #d4af37; text-decoration: none;">View on Map</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="rsvp-section">
+            <h2 class="section-title">RSVP</h2>
+            <div class="rsvp-container">
+                <form class="rsvp-form" id="rsvp-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Will you attend?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="attending" value="yes" required>
+                                <span class="radio-custom">Yes</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attending" value="no" required>
+                                <span class="radio-custom">No</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send RSVP</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <h2>"We Can't Wait To Celebrate With You"</h2>
+                <div class="footer-hearts">
+                    <div class="heart">🤍</div>
+                    <div class="heart">🤍</div>
+                    <div class="heart">🤍</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <img id="lightbox-image" src="" alt="Gallery Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
